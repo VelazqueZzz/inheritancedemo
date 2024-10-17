@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public class Member {
+abstract class Member {
     public String welcome = "Welcome to ABC Fitness";
     protected double annualFee;
     private String name;
@@ -39,13 +39,11 @@ public class Member {
         }
 
     }
-    public void dispalyMemInfo(){
+    public void displayMemInfo(){
         System.out.println("Member Name: " + name);
         System.out.println("Member ID: " + memberId);
         System.out.println("Member Since: " + memberSince);
         System.out.println("Annual Fee: " + annualFee);
     }
-    public void calculateAnnualFee(){
-        annualFee = 0;
-    }
+   abstract public void calculateAnnualFee();
 }
